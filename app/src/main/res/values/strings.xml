@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Numery Operacyjne PSP</string>
+    <string-array name="infix_spinner">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>W</item>
+        <item>Z</item>
+    </string-array>
+</resources>

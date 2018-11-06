@@ -1,0 +1,187 @@
+{
+  "project_info": {
+    "project_number": "944792878711",
+    "firebase_url": "https://pregnancy-calc.firebaseio.com",
+    "project_id": "pregnancy-calc",
+    "storage_bucket": "pregnancy-calc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944792878711:android:d2b5c4d60992d9ac",
+        "android_client_info": {
+          "package_name": "anuvi.numery.operacyjne.psp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944792878711-bafvm54ap739nf9q7oavpjq5da8qcfeq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "anuvi.numery.operacyjne.psp",
+            "certificate_hash": "0f80d49cda42419788b4bcc3b4aeb5b178c0cd36"
+          }
+        },
+        {
+          "client_id": "944792878711-ut801p6nmfepnqtbguv8urirj5oba36n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTofHVvk7fhGasJDYh2Tj0H4yQTt_Z8JU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944792878711-ut801p6nmfepnqtbguv8urirj5oba36n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944792878711:android:64e58dacc0483faa",
+        "android_client_info": {
+          "package_name": "com.google.firebase.udacity.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944792878711-qmljicbvp0gg9rss5hfcsjqga95v9aku.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.udacity.friendlychat",
+            "certificate_hash": "761f12151846ed469b3f2191b78c438c325de71a"
+          }
+        },
+        {
+          "client_id": "944792878711-ut801p6nmfepnqtbguv8urirj5oba36n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTofHVvk7fhGasJDYh2Tj0H4yQTt_Z8JU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944792878711-ut801p6nmfepnqtbguv8urirj5oba36n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944792878711:android:f486c59b1cd13692",
+        "android_client_info": {
+          "package_name": "gps.rpg.anuvi.rpgwithgps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944792878711-ev29oih095kuja0924l1473i4pr4gnnb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "gps.rpg.anuvi.rpgwithgps",
+            "certificate_hash": "761f12151846ed469b3f2191b78c438c325de71a"
+          }
+        },
+        {
+          "client_id": "944792878711-ut801p6nmfepnqtbguv8urirj5oba36n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTofHVvk7fhGasJDYh2Tj0H4yQTt_Z8JU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944792878711-ut801p6nmfepnqtbguv8urirj5oba36n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944792878711:android:c6c172fec54aaa47",
+        "android_client_info": {
+          "package_name": "insults.movie.anuvi.movieinsults"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944792878711-r2ki5nhaifc9a3iqdlf70n9g2g4jl1n2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "insults.movie.anuvi.movieinsults",
+            "certificate_hash": "761f12151846ed469b3f2191b78c438c325de71a"
+          }
+        },
+        {
+          "client_id": "944792878711-ut801p6nmfepnqtbguv8urirj5oba36n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTofHVvk7fhGasJDYh2Tj0H4yQTt_Z8JU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944792878711-ut801p6nmfepnqtbguv8urirj5oba36n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
