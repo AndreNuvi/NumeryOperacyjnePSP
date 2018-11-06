@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,6 +28,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private DatabaseReference mDatabaseFirstNumber;
@@ -40,17 +43,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private  TextView mAdnotationTextView;
     private Spinner mInfixSpinner;
 
-    Button mEnterButton;
-    String mGottenFirstNumber;
-    String mGottenSecondNumber;
-    String mInfixSpinnerSelectedItem;
-    String mUnitName = null;
-    String mTypeOfHeadquarter;
-    String mTypeOfUnit;
-    String mOspOrJrg;
-
-
-    Boolean isOSP;
+    private Button mEnterButton;
+    private String mGottenFirstNumber;
+    private String mGottenSecondNumber;
+    private String mInfixSpinnerSelectedItem;
+    private String mUnitName = null;
+    private String mTypeOfHeadquarter;
+//    private String mTypeOfUnit;
+//    private String mOspOrJrg;
+//    Boolean isOSP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 //Hide keyboard after click
                 InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                imm.hideSoftInputFromWindow(Objects.requireNonNull(getCurrentFocus()).getWindowToken(), 0);
 
                 //Save position of spinner
                 SharedPreferences sp = getSharedPreferences("infix_prefs", Activity.MODE_PRIVATE);
@@ -116,8 +117,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         try {
-                            String mInfix = dataSnapshot.getValue().toString();
-                            mProvinceTextView.setText("województwo " + mInfix);
+                            String mInfix = Objects.requireNonNull(dataSnapshot.getValue()).toString();
+                            mProvinceTextView.setText(R.string.wojewodztwo + mInfix);
                         } catch (NullPointerException e) {
                             mProvinceTextView.setText("");
                         }
@@ -180,7 +181,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             try {
-                                mUnitName = dataSnapshot.getValue().toString();
+                                mUnitName = Objects.requireNonNull(dataSnapshot.getValue()).toString();
                                 mUnitNameTextView.setText(mUnitName);
                             } catch (NullPointerException e) {
                                 // Check what type of headquarter it is
@@ -190,18 +191,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                     @Override
                                     public void onDataChange(DataSnapshot dataSnapshot) {
                                         try {
-                                            mUnitName = dataSnapshot.getValue().toString();
-//                                            mUnitNameTextView.setText(mOspOrJrg + "\n" + mUnitName);
+                                            mUnitName = Objects.requireNonNull(dataSnapshot.getValue()).toString();
+//                                          mUnitNameTextView.setText(mOspOrJrg + "\n" + mUnitName);
                                             mUnitNameTextView.setText(mUnitName);
 
                                         } catch (NullPointerException e) {
-                                            Toast.makeText(MainActivity.this, "Niepoprawny prefix", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(MainActivity.this, R.string.niepoprawny_sufix, Toast.LENGTH_SHORT).show();
                                             mUnitNameTextView.setText("");
                                         }
                                     }
 
                                     @Override
-                                    public void onCancelled(DatabaseError databaseError) {
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
                                     }
                                 });
@@ -209,7 +210,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         }
 
                         @Override
-                        public void onCancelled(DatabaseError databaseError) {
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
 
                         }
                     });
@@ -221,7 +222,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 //                } else if (isOSP == true && mGottenSecondNumber.length() == 2) {
 //                    mKindTextView.setText("w przypadku OSP sufix nie oznacza typu samochodu");
                 } else if (mGottenSecondNumber.length() == 1) {
-                    Toast.makeText(MainActivity.this, "Sufix musi zawierać 2 cyfry", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.sufix_musi_zawierać_2_cyfry, Toast.LENGTH_SHORT).show();
                     mKindTextView.setText("");
                 } else {
                     mDatabaseSecondNumber = FirebaseDatabase.getInstance().getReference().child("sufix").child(mGottenSecondNumber);
@@ -229,11 +230,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             try {
-                                String secondNumber = dataSnapshot.getValue().toString();
+                                String secondNumber = Objects.requireNonNull(dataSnapshot.getValue()).toString();
                                 mKindTextView.setText(secondNumber);
                                 mAdnotationTextView.setText(R.string.sufix);
                             } catch (NullPointerException e) {
-                                Toast.makeText(MainActivity.this, "Niepoprawny sufix", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, R.string.niepoprawny_sufix, Toast.LENGTH_SHORT).show();
                                 mKindTextView.setText("");
                             }
                         }
@@ -280,7 +281,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return true;
     }
 
-    public void checkNetwork() {
+    private void checkNetwork() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo ninfo = cm.getActiveNetworkInfo();
         if (ninfo != null && ninfo.isConnected()) {
