@@ -231,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             try {
                                 String secondNumber = dataSnapshot.getValue().toString();
                                 mKindTextView.setText(secondNumber);
-                                mAdnotationTextView.setText("w przypadku jednostki OSP sufix nie oznacza typu samochodu");
+                                mAdnotationTextView.setText(R.string.sufix);
                             } catch (NullPointerException e) {
                                 Toast.makeText(MainActivity.this, "Niepoprawny sufix", Toast.LENGTH_SHORT).show();
                                 mKindTextView.setText("");
@@ -286,7 +286,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if (ninfo != null && ninfo.isConnected()) {
             //do nothing
         } else {
-            mUnitNameTextView.setText("Do działania aplikacji potrzebny jest internet");
+            mUnitNameTextView.setText(R.string.internet);
             mKindTextView.setText("");
             mProvinceTextView.setText("");
             mAdnotationTextView.setText("");

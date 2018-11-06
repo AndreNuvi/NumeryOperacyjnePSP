@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Numery Operacyjne PSP</string>
+    <string name="sprawdz">Sprawdź</string>
+
+    <string name="internet">Do działania aplikacji potrzebny jest internet</string>
+    <string name="sufix">w przypadku jednostki OSP sufix nie oznacza typu samochodu</string>
+    <string name="info">Info</string>
+    <string name="info_text">Aplikacja \"Numery Opecyjne PSP\" służy do szybkiego identyfikowania przynależności organizacyjnej pojazdów ratowniczo-gaśniczych\n\n
+                Aplikacja nie zawiera dokładnych nazw jednostek ratowniczo-gaśniczych ani jednostek ochotniczych straży pożarnych, a jedynie ogólną informację o rodzaju pojazdu, województwie oraz komendzie psp, pod którą podlega\n\n
+                Aplikacja bazuje na załączniku zarządzenia Komendanta Głównego PSP z dnia 10 kwietnia 2008 r. w sprawie gospodarki transportowej w jednostkach organizacyjnych PSP oraz na ogólnie dostępnych w internecie wykazach jednostek organizacyjnych PSP wraz z ich kryptonimami.</string>
+
+
     <string-array name="infix_spinner">
         <item>A</item>
         <item>B</item>
